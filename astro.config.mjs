@@ -5,7 +5,6 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   // change this to your own domain
-  site: "http://msalah.net/barebones",
-  base: 'barebones',
+  site: "http://msalah.io",
   integrations: [tailwind(), sitemap()],
 });
