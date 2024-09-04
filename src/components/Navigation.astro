@@ -10,7 +10,7 @@ import { NAV_LINKS, SITE } from "@siteConfig.ts";
         Object.keys(NAV_LINKS).map((navItemKey) => {
           return (
             <li>
-              <a href={`/barebones/${NAV_LINKS[navItemKey].path}`}>
+              <a href={NAV_LINKS[navItemKey].path}>
                 {NAV_LINKS[navItemKey].label}
               </a>
             </li>
