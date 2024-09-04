@@ -1,5 +1,8 @@
 ---
 share: "true"
+title: Distributed Systems Resources
+description: This some of the resources i found to learn distributed systems
+publicationDate: 2024-1-1
 ---
 
 1.  [Distributed Systems lecture series](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB)
