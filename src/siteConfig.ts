@@ -5,11 +5,11 @@ import type {
 } from "@/types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "Barebones",
+  title: "Mohamed A. Salah",
   description:
-    "A barebones starter theme. Built with Astro, Tailwind CSS, and Markdown.",
-  url: "https://barebones.superwebthemes.com",
-  author: "SuperWeb Themes",
+    "This is my free space in the internet. I write about software engineering, and my thoughts and ideas.",
+  url: "https://msalah.net/barebones",
+  author: "Mohamed A. Salah",
   locale: "en-US",
 };
 
@@ -26,27 +26,19 @@ export const NAV_LINKS: NavigationLinks = {
     path: "/contact",
     label: "Contact",
   },
-  documentation: {
-    path: "https://docs.superwebthemes.com",
-    label: "Documentation",
-  },
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
   email: {
     label: "Email",
-    url: "mailto:support@superwebthemes.com",
+    url: "mailto:me@msalah.net",
   },
   github: {
     label: "GitHub",
-    url: "https://github.com/superwebthemes",
+    url: "https://github.com/m4salah",
   },
-  discord: {
-    label: "Discord",
-    url: "https://discord.gg/V5MCBCsAjJ",
-  },
-  twitter: {
-    label: "Twitter",
-    url: "https://twitter.com/superwebthemes",
+  linkedin: {
+    label: "LinkedIn",
+    url: "https://linkedin.com/in/mohamed-a-salah",
   },
 };
