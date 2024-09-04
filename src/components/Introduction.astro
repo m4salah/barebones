@@ -1,49 +1,52 @@
+---
+import { SOCIAL_LINKS } from "@siteConfig";
+---
+
 <section>
   <p>
-    Welcome to Barebones, an open source template for <a
-      href="https://astro.build/">Astro</a
-    > designed for simplicity and flexibility. Whether you're a seasoned developer
-    or just starting out, Barebones provides everything you need to kickstart your
-    next blog with minimal setup.
+    <a href="https://techforpalestine.org/learn-more" class="external"
+      ><img
+        src="https://badge.techforpalestine.org/default"
+        alt="Ceasefire Now"
+      /></a
+    >
+  </p>
+
+  <p>
+    Hello internet, I’m <strong>Mohamed Abdelkhalek Salah</strong> (Arabic: <strong
+      >محمد عبدالخالق صلاح</strong
+    >). This is my <a
+      href="https://github.com/MaggieAppleton/digital-gardeners"
+      class="external">digital garden</a
+    >. It’s a public space.
   </p>
   <br />
   <p>
-    Head over to the <a href="https://github.com/superwebthemes/barebones"
-      >repository</a
-    > and check out our <a href="https://barebones.superwebthemes.com"
-      >documentation</a
-    > to get started.
+    I’m a <strong>Software Engineer</strong>. Adoptable with any technology for
+    now I’m using <a href="https://nodejs.org/" class="external">NodeJS</a>, <a
+      href="https://www.typescriptlang.org/"
+      class="external">Typescript</a
+    >, <a href="https://nestjs.com/" class="external">NestJS</a>, <a
+      href="https://www.postgresql.org/"
+      class="external">PostgreSQL</a
+    >, and <a href="https://nextjs.org/" class="external">NextJS</a> In my work,
+    using <a href="https://go.dev/" class="external">Golang</a> and <a
+      href="https://www.rust-lang.org/"
+      class="external">Rust</a
+    > for my side project.
   </p>
-  <h2 class="mt-6 text-lg font-bold">Key features</h2>
+  <h2 class="mt-6 text-lg font-bold">Contacts and Social profiles</h2>
   <ul>
-    <li>
-      <strong>Batteries included: </strong>Get started immediately with a
-      ready-to-use setup. Start writing right away, no extensive configuration
-      required.
-    </li>
-    <li>
-      <strong>Fast by default: </strong>Leverage the power of Astro, Tailwind
-      CSS, and Markdown to create fast, lightweight web pages.
-    </li>
-    <li>
-      <strong>Extensible and customizable: </strong>Perfect foundation to build
-      upon and meet your unique needs.
-    </li>
-    <li>
-      <strong>SEO-friendly: </strong>Sitemap, RSS feeds, and Open Graph protocol
-      support out of the box.
-    </li>
-    <li>
-      <strong>Best practices: </strong>Follows industry best practices for
-      development, ensuring high-quality, maintainable code.
-    </li>
-    <li>
-      <strong>Accessible: </strong>Dark and light mode support, keyboard
-      navigation, and semantic HTML. Fully compliant with WCAG standards.
-    </li>
-    <li>
-      <strong>Free and open source: </strong>Join the community and contribute
-      to make this project even better!
-    </li>
+    {
+      Object.keys(SOCIAL_LINKS).map((socialLinkKey) => {
+        return (
+          <li>
+            <a href={SOCIAL_LINKS[socialLinkKey].url}>
+              {SOCIAL_LINKS[socialLinkKey].label}
+            </a>
+          </li>
+        );
+      })
+    }
   </ul>
 </section>
