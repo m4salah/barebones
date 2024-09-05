@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SeoPage from "@components/SeoPage.astro";
+import Post from "@components/Post.astro";
+
+export async function getStaticPaths() {
+  const allPosts = (await getCollection("blog")).sort(
+    (a, b) =>
+      b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
+  );
+
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags?.includes(tag ?? ""),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <SeoPage slot="head" title="Tags" />
+  <a class="text-2xl" href={`/tags/${tag}`}>#{tag}</a>
+  <ul class="mt-4">
+    {posts.map((post) => <Post post={post} />)}
+  </ul>
+</BaseLayout>

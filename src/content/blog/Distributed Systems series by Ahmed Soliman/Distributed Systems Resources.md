@@ -4,6 +4,7 @@ description: This some of the resources i found to learn distributed systems
 publicationDate: 2024-1-1
 image: ./gon-and-killua.jpg
 imageAlt: Gon and killua from HxH anime
+tags: ["distributed", "resources"]
 ---
 
 1. [Distributed Systems lecture series](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB)
@@ -19,4 +20,3 @@ imageAlt: Gon and killua from HxH anime
 6. [Distributed Systems Reading List](https://dancres.github.io/Pages/)
 
 7. [Concurrent and Distributed Systems](https://www.cl.cam.ac.uk/teaching/2122/ConcDisSys/)
-

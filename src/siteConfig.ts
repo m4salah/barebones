@@ -26,6 +26,10 @@ export const NAV_LINKS: NavigationLinks = {
     path: "/contact",
     label: "Contact",
   },
+  tags: {
+    path: "/tags",
+    label: "Tags",
+  },
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
