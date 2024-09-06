@@ -10,13 +10,13 @@ imageAlt: Episode 1 thumbnail
 ---
 [Youtube video](https://www.youtube.com/watch?v=s_p3I5CMGJw)
 # Why distribute systems ?
-## The Wrong reasons:
+## The Wrong reasons
 
 - It's fun
 - My boss tells me to make it distributed systems/microservices
 - make it distributed without experience because we worry of the future scalability.
 
-## The right reasons:
+## The right reasons
 
 - Scalability of course (balance the load across machines)
 - Reduce latency for users around the globe, serve the request as fast as possible and this require us to make the server closer as we can to the user (better user experience), we still bounded by the light speed theoretically [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832).
