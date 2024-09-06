@@ -1,7 +1,6 @@
 ---
 tags:
   - distributed
-  - distributedsystems
 share: "true"
 title: Episode 1 Why distributed system
 description: Episode 1 Why distributed system, why we need it, and when you need it.
