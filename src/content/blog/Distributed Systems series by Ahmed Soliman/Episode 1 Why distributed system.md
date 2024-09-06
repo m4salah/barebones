@@ -9,7 +9,6 @@ publicationDate: 2024-1-2
 image: ../Distributed Systems بالعربي ｜ Episode 1 ｜ Why distributed systems？ [s_p3I5CMGJw].webp
 imageAlt: Episode 1 thumbnail
 ---
-![[Distributed Systems بالعربي ｜ Episode 1 ｜ Why distributed systems？ [s_p3I5CMGJw].webp|Distributed Systems بالعربي ｜ Episode 1 ｜ Why distributed systems？ [s_p3I5CMGJw].webp]]
 [Youtube video](https://www.youtube.com/watch?v=s_p3I5CMGJw)
 # Why distribute systems ?
 ---
@@ -40,7 +39,7 @@ The process which we split the compute (CPU) or the state (memory, disk) or both
 ***the state is offloaded.***
 Which machine doesn't hold the state, the state is persisted elsewhere and access it. for example web application running on many servers but they access the same database or database cluster. 
 
-![[stateless distributed systems.png|stateless distributed systems.png]]
+![stateless distributed systems.png](stateless%20distributed%20systems.png)
 
 ## Stateful distributed system:
 ***Every Node hold a state***
@@ -51,7 +50,7 @@ Which machine hold the state if it's own. for example
 	2. if they are *eventually* will be the same we call that ***Eventual Constituency***
 - if the State = State A + State B we call that ***Sharding or Partitioning***
 
-![[stateful distributed systems.png|stateful distributed systems.png]]
+![stateful distributed systems.png](stateful%20distributed%20systems.png)
 With this mechanism we trade of the availability because if one machine is down we do not have the whole state. to mitigate this problem how likely the company can pay for higher availability. like replicate the machine into whatever we want.
 
 ---
@@ -67,7 +66,7 @@ With this mechanism we trade of the availability because if one machine is down 
 ### Network partitioning problem
 Suppose we have 6 nodes the are connected through the network, the partitioning problem happened when there are subset of nodes separated from the others nodes and they think that they are the only nodes alive and same for the other nodes.
 
-![[network partitioning problem.png|network partitioning problem.png]]
+![network partitioning problem.png](network%20partitioning%20problem.png)
 
 ## CAP theorem
 https://www.youtube.com/watch?v=gkg-FAEXIkY
@@ -82,7 +81,7 @@ Suppose we have two army (army 1 and army 2) they need to invade country but the
 they must be communicating to agree on the time to invade, we suppose the messenger is authentic and the message will be received is **authentic and true**.
 If we send the messenger from army 1 with certain time to invade and army 2 received the message and agree on the time he send another messenger to confirm the invade time.
 The problem here from army 1 point he send the messenger and assume the army 2 received it and he will attack on the time or he wait the response from Army 2 to confirm but from Army 2 point he confirm the time and send the messenger but he didn't know if army 1 received the confirmation or not, Do we make army 1 send another messenger to confirm the confirmation, we are stuck in a loop, it's require send and received infinite number of messages to confirm the time, This type problem called ***Consensus (common knowledge)***. to reach the consensus we require infinite number of messages (assurance problem). ***No Solution for this problem for 100%***.
-![[two generals problem.png|two generals problem.png]]
+![two generals problem.png](two%20generals%20problem.png)
 ## Byzantine Generals problem
 The same as the previous problem but the messages is will be received 100% we assure that the message will be received but the message maybe it's corrupted or the messenger is disloyal or one of the army is actively send wrong information (gray failure the army or the node is running but actively send wrong messages or corrupted or compromised or the messenger late).
 
