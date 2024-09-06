@@ -49,7 +49,7 @@ Which machine hold the state if it's own. for example
 	1. if they are the same in any point of time. we call that ***Strong Consistency***. 
 	2. if they are *eventually* will be the same we call that ***Eventual Constituency***
 - if the State = State A + State B we call that ***Sharding or Partitioning***
-![stateful distributed systems.png](<assets/stateful distributed systems.png>)
+![stateful distributed systems.png](<./assets/stateful distributed systems.png>)
 With this mechanism we trade of the availability because if one machine is down we do not have the whole state. to mitigate this problem how likely the company can pay for higher availability. like replicate the machine into whatever we want.
 
 ---
@@ -65,7 +65,7 @@ With this mechanism we trade of the availability because if one machine is down 
 ### Network partitioning problem
 Suppose we have 6 nodes the are connected through the network, the partitioning problem happened when there are subset of nodes separated from the others nodes and they think that they are the only nodes alive and same for the other nodes.
 
-![network partitioning problem.png](<assets/network partitioning problem.png>)
+![network partitioning problem.png](<./assets/network partitioning problem.png>)
 
 ## CAP theorem
 https://www.youtube.com/watch?v=gkg-FAEXIkY
