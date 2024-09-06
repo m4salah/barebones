@@ -8,7 +8,7 @@ image: ./Distributed Systems  بالعربي ｜ Episode 2 ｜ State Machine Rep
 imageAlt: Episode 2 thumbnail
 publicationDate: 2023-10-13
 ---
-[Youtube video](https://www.youtube.com/watch?v=j8bLPfCJdSw)
+[YouTube video](https://www.youtube.com/watch?v=j8bLPfCJdSw)
 
 We ended up the last episode with definition of the ***Consensus Problem*** So we will try to come up with something to solve the Consensus problem.
 
@@ -20,16 +20,16 @@ Assume we have one machine with single threaded single core or guarantied as sin
 
 So I have two option if the two option
 
-- ### Concurrent Execution
- meaning there is **overlapping window** between the two clients call (join).
- ![concurrent call](concurrent%20call.png)
- *The green area is the overlapping window*
+### Concurrent Execution
 
-- ### Sequential Execution
- meaning there is no **overlapping window** between the two call (disjoint)
- ![sequential call](sequential%20call.png)
+Meaning there is **overlapping window** between the two clients call (join).
+![concurrent call](concurrent%20call.png)
+*The green area is the overlapping window*
 
----
+### Sequential Execution
+
+Meaning there is no **overlapping window** between the two call (disjoint)
+![sequential call](sequential%20call.png)
 
 ## Design Key value store
 
@@ -89,11 +89,13 @@ We can replicate the Node under Three condition:
 
 With that knowledge it's becoming easier to add node to the cluster I have two option:
 
-- #### Add Node with vanilla state
+#### Add Node with vanilla state
+
  Add node with vanilla state and execute all the command from the very start with same order until we finish
  ![Pasted image 20231012213012](Pasted%20image%2020231012213012.png)
 
-- #### Take snapshot from existing node (take fresh state)
+#### Take snapshot from existing node (take fresh state)
+
  Take snapshot from existing node and remember last command executed on this node then execute the following command after last command remembered
  ![Pasted image 20231012213132](Pasted%20image%2020231012213132.png)
 
@@ -106,16 +108,12 @@ So attach the timestamp from the server, if all the server have the same physica
 
 But the idea remain the same I need some way to order the command by (sequence number for example) but there are universal agreement among all the node in the cluster on that sequence, but who is responsible to put that sequence number ***Leader*** or If node get a sequence number all node must agree on this.
 
----
-
 ## Log Data structure
 
 We need data structure to store that kind of sequence command, basically hold the command with it's order it's like queue but not really a queue this data structure called ***Log***
 
 [Logs](Logs.md): “A log is perhaps the simplest possible storage abstraction. It is an append-only, totally-ordered sequence of records ordered by time”. [Jay Kreps](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying).
 ![log](log.png)
-
----
 
 ## Paxos Algorithm
 
