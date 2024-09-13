@@ -6,6 +6,9 @@ export default {
   },
   plugins: [require("@tailwindcss/typography")],
   theme: {
+    fontFamily: {
+      mono: ['"JetBrains Mono"', "monospace"],
+    },
     extend: {
       colors: {
         lightModeBackground:

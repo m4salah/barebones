@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: "JetBrains Mono", monospace;
+  }
+
   :root {
     color-scheme: light dark;
 
@@ -15,9 +19,7 @@
   }
 
   body {
-    background-color: light-dark(
-      rgb(var(--light-mode-background)),
-      rgb(var(--dark-mode-background))
-    );
+    background-color: light-dark(rgb(var(--light-mode-background)),
+        rgb(var(--dark-mode-background)));
   }
 }
