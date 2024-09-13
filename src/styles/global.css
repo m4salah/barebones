@@ -16,10 +16,18 @@
     --dark-mode-background: 10 10 10;
     --dark-mode-foreground: 255 255 255;
     --dark-mode-foreground-muted: 205 205 205;
+    --heading-color: #ebdbee;
   }
 
   body {
     background-color: light-dark(rgb(var(--light-mode-background)),
         rgb(var(--dark-mode-background)));
+  }
+
+  blockquote {
+    border-left: 3px solid var(--heading-color);
+    color: #737373;
+    margin: 0;
+    padding-left: 1em
   }
 }
