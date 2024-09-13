@@ -8,7 +8,7 @@ export const SITE: SiteConfiguration = {
   title: "Mohamed A. Salah",
   description:
     "This is my free space in the internet. I write about software engineering, and my thoughts and ideas.",
-  url: "https://msalah.io",
+  url: "https://msalah.net/barebones",
   author: "Mohamed A. Salah",
   locale: "en-US",
 };
