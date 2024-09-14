@@ -7,7 +7,9 @@ export default {
   plugins: [require("@tailwindcss/typography")],
   theme: {
     fontFamily: {
+      sans: ['"Bricolage Grotesque"', "sans-serif"],
       mono: ['"JetBrains Mono"', "monospace"],
+      roboto: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {
