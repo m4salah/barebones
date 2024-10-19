@@ -3,31 +3,61 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Bricolage Grotesque", sans-serif;
-  }
-
   :root {
-    color-scheme: light dark;
+    --font-family: "JetBrains Mono", monospace;
+    --line-height: 1.20rem;
+    --border-thickness: 2px;
+    --text-color: #000;
+    --text-color-alt: #666;
+    --background-color: #fff;
+    --background-color-alt: #eee;
 
-    --light-mode-background: 240 240 240;
-    --light-mode-foreground: 0 0 0;
-    --light-mode-foreground-muted: 50 50 50;
-    --dark-mode-background: 10 10 10;
-    --dark-mode-foreground: 255 255 255;
-    --dark-mode-foreground-muted: 205 205 205;
-    --heading-color: #ebdbee;
+    --font-weight-normal: 500;
+    --font-weight-medium: 600;
+    --font-weight-bold: 800;
+
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-normal);
+    font-style: normal;
+    font-variant-numeric: tabular-nums lining-nums;
+    font-size: 16px;
   }
 
-  body {
-    background-color: light-dark(rgb(var(--light-mode-background)),
-        rgb(var(--dark-mode-background)));
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #fff;
+      --text-color-alt: #aaa;
+      --background-color: #000;
+      --background-color-alt: #111;
+    }
   }
+
+  html {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+
 
   blockquote {
     border-left: 3px solid var(--heading-color);
     color: #737373;
     margin: 0;
     padding-left: 1em
+  }
+
+  a {
+    text-decoration-thickness: var(--border-thickness);
+  }
+
+  a:link,
+  a:visited {
+    color: var(--text-color);
   }
 }
